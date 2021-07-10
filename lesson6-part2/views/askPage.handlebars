@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Dang cau hoi ne</h1>
+
+    <form action="/ask" method="POST">
+        <textarea id="input" class="form-control" rows="4" cols="40" type="text" name="question"></textarea>
+        <span>con <span id="character">200</span>/200 ky tu</span>
+        <button style="display: block;" class="btn btn-primary" type="submit">Gui</button>
+    </form>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#input").keyup(function(){
+           $("#character").html(200-$("#input").val().length)
+        })
+    })
+</script>

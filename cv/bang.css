@@ -1,0 +1,22 @@
+.thediv{
+width: 900px;
+height: 600px;
+font-size: 30px;
+border: 1px solid black;
+}
+th {
+    height: 100px;  
+  }
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width:100%
+  }
+  td{
+    
+    font-size: 20px;
+  }
+ 

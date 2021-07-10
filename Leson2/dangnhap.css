@@ -1,0 +1,20 @@
+.thediv{
+background: grey;
+width: 260px;
+height: 230px;
+font-size: 10px;
+border: 1px black solid;
+color: white;
+}
+.thediv2{
+    background: white;
+    width: 260px;
+    height: 140px;
+    border: 1px black solid;
+    font-size : 15px ;
+    color: black;
+}
+td{
+    border:1px black solid
+
+}

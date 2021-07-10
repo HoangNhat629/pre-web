@@ -1,0 +1,30 @@
+<h1 style="text-align: center; margin-top:2em" name="questionData">
+    {{questionData}}
+</h1>
+
+
+
+<div class="row" style="margin-top: 1em; position: relative">
+    <div class="col">
+        <form action="/yes" method="POST">
+            <textarea style="visibility: hidden;display: none;" 
+             name="id">{{id}}</textarea>
+            <button style="position: absolute; margin: 0; left:50%" class="btn btn-secondary" type="submit">YES</button>
+        </form>
+
+    </div>
+    <div class="col">
+        <form action="/no" method="POST">
+            <textarea style="visibility: hidden;" name="id">{{id}}</textarea>
+            <button style="position:absolute; margin:0; right:50%" type="submit" class="btn btn-warning">NO</button>
+        </form>
+    </div>
+
+    <div class="col">
+        <form action="/delete" method="POST">
+            <textarea style="visibility: hidden;" name="id">{{id}}</textarea>
+            <button style="position:absolute; margin:0; right:50%" type="submit" class="btn btn-warning">DELETE</button>
+        </form>
+    </div>
+    
+</div>

@@ -1,0 +1,30 @@
+<div>
+    <h1>Hello ba con</h1>
+    <form action="/manage/create-product" method="GET">
+        <button class="btn btn-primary" type="submit">CREATE</button>
+    </form>
+
+    <form action="/read-product" method="GET">
+        <button class="btn btn-primary" type="submit">READ</button>
+    </form>
+
+    <form action="/update-product" method="GET">
+        <button class="btn btn-primary" type="submit">UPDATE</button>
+    </form>
+
+    <form action="/delete-product" method="GET">
+        <button class="btn btn-primary" type="submit">DELETE</button>
+    </form>
+    {{!-- {{{htmlContent}}} --}}
+    {{!-- for each  --}}
+    {{#each data}}
+        {{#if @first}}
+            <p>danh sach mat hang</p>
+        {{/if}}
+            <p>{{@index}}</p>
+            <p>{{sku}}</p>
+            <p>{{title}}</p>
+    {{/each}}
+
+
+</div>

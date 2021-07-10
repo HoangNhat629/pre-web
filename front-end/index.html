@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="public/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="selection">
+            <h6>size</h6>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="S">
+                    <span class="checkmark">S</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="M">
+                    <span class="checkmark">M</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="L">
+                    <span class="checkmark">L</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="XL">
+                    <span class="checkmark">XL</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="XXL">
+                    <span class="checkmark">XXL</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="XXXL">
+                    <span class="checkmark">XXXL</span>
+                </label>
+            </div>
+        </div>
+        <div class="products">
+            <div class="items">
+                <img src="./public/images/anh1.jpg" alt="">
+                <p>/ không có gì / áo khoác huấn luyện viên</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>50</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+            <div class="items">
+                <img src="./public/images/anh6.jpg" alt="">
+                <p>/ không có gì /tee vuông</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>40</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+            <div class="items">
+                <img src="./public/images/anh2.jpg" alt="">
+                <p>/nothing/ NYLON WEBBING JOGGER</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>50</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+            <div class="items">
+                <img src="./public/images/anh3.jpg" alt="">
+                <p>/ không có gì / ba lô rocket</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>60</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+            <div class="items">
+                <img src="./public/images/anh4.jpg" alt="">
+                <p>/ không có gì / ví vuông</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>40</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+            <div class="items">
+                <img src="./public/images/anh5.jpg" alt="">
+                <p>/ không có gì / áo dài tay dài</p>
+                <div class="price">
+                    <small>$</small>
+                    <b>50</b>
+                    <span><b>.99</b></span>
+                </div>
+                <div class="buy-btn">
+                    <label>
+                        <input type="checkbox" value="mua">
+                        <span class="checkmark">Mua</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="shopping">
+        <div id="bag-button" class="bag"></div>
+        <div class="scroll">
+            <div class="shopping-header">
+                <span class="bag-header"></span>
+                <span class="title-header">Cart</span>
+            </div>
+            <div class="shopping-container">
+                <p class="empty-container">Nothing in here</p>
+            </div>
+            <div class="shopping-footer">
+                <div class="SUBTOTAL">SUBTOTAL</div>
+                <div class="price">
+                    <p>$0.00</p>
+                </div>
+                <div class="footer-buybtn"> Buy </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).on("click", "#bag-button", function () {
+            $("#bag-button").replaceWith("<div id='close-button' class = 'close-btn'>X</div>")
+            $(".shopping").css("right", "0")
+        })
+        $(document).on("click", "#close-button", function () {
+            $(".shopping").css("right", "-450px")
+            $("#close-button").replaceWith("<div id='bag-button' class = 'bag'></div>")
+        })
+        $(document).on("click", ".item", function () {
+            $(".empty - container").replaceWith("<div class='shopping - container'></div>")
+        })
+
+
+    </script>
+</body>
+
+</html>

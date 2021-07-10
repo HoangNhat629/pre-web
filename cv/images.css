@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;  
+    background: url('http://papers.co/wallpaper/papers.co-vk85-lollipop-background-simple-flat-material-pattern-40-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 1000px;
+}
+header {
+    float: left;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(50, 30, 82, 0.24); 
+    position: relative; 
+}
+header > nav > ul > li {
+    float: left;
+    margin-top: 20px;
+    margin-left: 56px;
+    list-style: none;
+    color:#000;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#img img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-top: 120px;
+    margin-left: 134px;
+    border: 3px solid grey;
+}
+#name {
+    float: left;
+    position: absolute;
+    top: 375px;
+    left: 686px;
+    text-align: center;
+    color: #000;
+}
+h3 {
+    font-size: 25px;
+}
+#name p {
+    font-size: 15px;
+}
+.about {
+    width: 1200px;
+    height: 300px;
+    float: left;
+    background-color: #3c2f7363;
+    color: #000;
+    margin-left: 165px;
+    margin-top: 20px;
+}
+.objective {
+    width: 500px;
+    height: 300px;
+    font-size: 17px;
+    padding: 15px;
+    float: left;
+}
+.basic_info {
+    float: left;
+    width: 620px;
+    height: 300px;
+    padding: 10px;
+}
+.exp {
+    width: 1200px;
+    height: 338px;
+    float: left;
+    color: #fff;
+    margin-left: 165px;
+    margin-top: 20px;
+}
+.company_1 {
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+.time_1 {
+    width: 300px;
+    height: 160px;;
+    background-color: #3c2f7363;
+    color: #000;
+    float: left;
+    position: relative;
+}
+.time_1 p {
+    color: #000;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+.place_1 {
+    width: 872px;
+    height: 140px;
+    float: left;
+    background-color: #3c2f7363;
+    color: #000;
+    margin-left: 17px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+h2 {
+    text-align: center;
+    width: 100%;
+    height: 140px;
+    float: left;
+    margin-top: 55px;
+}
+.company_2 {
+    width: 100%;
+    height: 100px;
+    float: left;
+    color: #000;
+}
+.time_2 {
+    width: 300px;
+    height: 160px;;
+    background-color: #3c2f7363;
+    float: left;
+    position: relative;
+    top: 77px;
+}
+.time_2 p {
+    position: absolute;
+    top: 60px;
+    left: 72px;
+    color: #000;
+}
+.place_2 {
+    width: 872px;
+    height: 138px;
+    float: left;
+    background-color: #3c2f7363;
+    margin-left: 17px;
+    padding-left: 10px;
+    padding-top: 20px;
+    position: relative;
+    top: 80px;
+    color: #000;
+}
+.act {
+    width: 1200px;
+    height: 338px;
+    float: left;
+    margin-left: 165px;
+    margin-top: 20px;
+    color: #000;
+}
+.act_1 {
+    width: 100%;
+    height: 100px;
+    float: left;
+    color: #000;
+}
+.time_3 {
+    width: 300px;
+    height: 160px;;
+    background-color: #3c2f7363;
+    float: left;
+    position: relative;
+    color: #000;
+}
+.time_3 p {
+    position: absolute;
+    top: 60px;
+    left: 72px;
+    color: #000;
+}
+.place_3 {
+    width: 872px;
+    height: 140px;
+    float: left;
+    background-color: #3c2f7363;
+    margin-left: 17px;
+    padding-left: 10px;
+    position: relative;
+    padding-top: 20px;
+    color: #000;
+}
+.act_2 {
+    width: 100%;
+    height: 100px;
+    float: left;
+    color: #000;
+}
+.time_4 {
+    width: 300px;
+    height: 160px;;
+    background-color: #3c2f7363;
+    float: left;
+    position: relative;
+    top: 77px;
+    color: #000;
+}
+.time_4 p {
+    position: absolute;
+    top: 60px;
+    left: 72px;
+    color: #000;
+}
+.place_4 {
+    width: 872px;
+    height: 138px;
+    float: left;
+    background-color: #3c2f7363;
+    margin-left: 17px;
+    padding-left: 10px;
+    position: relative;
+    top: 80px;
+    padding-top: 20px;
+    color: #000;
+}
+.contact {
+    float: left;
+    width: 1000px;
+    height: 560px;
+    color: black;
+    position: relative;
+    top: 25px;
+    left: 280px;
+    background-color: rgba(6, 2, 14, 0.55);
+}
+.contact h1 {
+    text-align: center;
+    color: #fff;
+}
+input {
+    width: 690px;
+    height: 50px;
+    border: 1px solid #000;
+    outline: none;
+    margin-left: 140px;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+button {
+    color: #fff;
+    background-color: #06001080;
+    font-size: 21px;
+    border: none;
+    margin-top: 50px;
+    margin-left: 140px;
+    width: 702px;
+    height: 50px;
+}
+.contact > button:hover {
+    background-color: #060010cc;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    float: left;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    margin-top: 200px;
+    background-color: #38305a96;
+}

@@ -1,0 +1,160 @@
+<div class="main">
+    <div class="selection">
+        <h6>Sizes</h6>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="XS">
+                <span class="checkmark">XS</span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="S">
+                <span class="checkmark">S</span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="M">
+                <span class="checkmark">M</span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="L">
+                <span class="checkmark">L</span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="XL">
+                <span class="checkmark">XL</span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="XXL">
+                <span class="checkmark">XXL</span>
+            </label>
+        </div>
+
+
+    </div>
+    <div id="products" class="products">
+        {{!-- <div class="item">
+                <img src="/img/anh1.jpg" alt="">
+                <p>Mot cai ao rat dep</p>
+                <div class="price">
+
+                    <small>$</small>
+                    <b>30</b>
+                    <span>.99</span>
+                </div>
+                <div class="buy-btn">
+                    Mua ne
+                </div>
+            </div> --}}
+        {{{HTML}}}
+    </div>
+
+
+</div>
+<div id="shopping-bag" class="shopping">
+    <span id="bag-button" class="bag"></span>
+    <div class="scroll">
+        <div class="shopping-header">
+            <span class="bag-header"></span>
+            <span class="title-header">Cart</span>
+        </div>
+        <div class="shopping-container">
+            <p class="empty-container">Hello! It's empty here</p>
+
+        </div>
+        <div class="shopping-footer">
+            <div class="SUBTOTAL">
+                SUBTOTAL
+            </div>
+            <div class="price">
+                <p>$ 0.00</p>
+            </div>
+
+            <div class="footer-buybtn">
+                Mua ne
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(document).on('click', '#bag-button', function () {
+        $("#bag-button").replaceWith("<div id='close-button' class='close-btn'>X</div>")
+        $("#shopping-bag").css("right", "0")
+    })
+
+    // $("#close-button").click(function () {
+    //     alert("Clicked")
+    //     $("#shopping-bag").css("right", "-450px")
+    //     $("#close-button").remove()
+    //     $("#shopping-bag").append("<span id='bag-button' class='bag'></span>")
+
+    // })
+
+    $(document).on('click', '#close-button', function () {
+        $("#shopping-bag").css("right", "-450px")
+        $("#close-button").replaceWith("<span id='bag-button' class='bag'></span>")
+    });
+
+    $(document).ready(function () {
+        let searchData = []
+        $(":checkbox").change(function () {
+            if (this.checked == true) {
+                searchData.push(this.value)
+                alert(searchData)
+            } else {
+                for (let i = 0; i < searchData.length; i++) {
+                    if (searchData[i] == this.value) {
+                        searchData.splice(i, 1)
+                        alert(searchData)
+                    }
+                }
+            }
+            $("#products .item").filter(function () {
+                $(this).toggle($(this).children("span").text().toUpperCase().indexOf(searchData) > -1)
+            })
+        })
+
+        $(document).on("click", ".item", function () {
+            let imgLink = $(this).children('img').attr('src')
+            let title = $(this).children("p").text()
+            let price = $(this).children(".price").children("b").text()
+            $(".empty-container").remove()
+            $(".shopping-container").append(`
+                 <div class="shopping-item">
+                    <div class="item-img">
+                        <img src="${imgLink}" alt="">
+
+                    </div>
+                    <div class="item-details">
+                      <p>${title}</p>
+                    </div>
+                    <div class="item-price">
+                        <p>$ ${price}</p>
+                    <div>
+                        <button class="change-product-btn">-</button>
+                        <button class="change-product-btn">+</button>
+                    </div>
+                    </div>
+                </div>
+            `)
+            
+        })
+
+
+      
+
+    })
+
+
+
+
+</script>

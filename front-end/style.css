@@ -1,0 +1,190 @@
+.main{
+    display: flex;
+}
+div{
+    display: block;
+}
+.selection{
+    width: 20%;
+}
+.products{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap ;
+}
+.checkbox{
+    display: inline-block;
+}
+.checkbox label{    
+    display:inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+.checkbox label :hover span{
+    border: 1 px solid black;
+}
+.checkbox label input:checked~.checkmark{
+background-color: black;
+color: white;
+}
+.checkbox label input{
+    position: absolute;
+    opacity: 0;
+}
+.checkbox label .checkmark{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-size: .8em;
+    text-align: center;
+    background-color: grey;
+    border-radius:50% ;
+}
+.items{
+width: 25%;
+padding: 10px;
+margin-bottom:2em ;
+position: relative;
+text-align: center;
+display: inline-block;
+cursor: pointer;
+}
+.items:hover{
+    border: 1px solid white;
+}
+.items:hover .buy-btn{
+background-color:red ;
+}
+.items img{
+    width: 100%;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.items img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);}
+.items p{
+    position: relative;
+    margin-top: 1em;
+    height: 50px;
+}
+.items p::before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: purple ;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    margin-left: -10px;
+}
+.items .buy-btn{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    margin-top: 10px;
+    transition: background-color .2s;
+}
+.items label input{
+    position: absolute;
+    opacity: 0;
+}
+.shopping{
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100%;
+    background-color: black ;
+}
+.shopping .bag{
+    position: absolute;
+    left: -60px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: black ;
+    background-image: url(./public/images/bag.png) ;
+    background-repeat: no-repeat ;
+    background-position: 50%;
+}
+.shopping-header{
+    color: white;
+    text-align: center;
+    padding: 45px 0;
+}
+.bag-header{
+ width: 40px;
+ height: 40px;
+ position: relative;
+ display: inline-block;
+ vertical-align: middle;
+ margin-right: 15px;
+background-image: url(./public/images/bag.png);
+background-repeat: no-repeat;
+background-size: contain ;
+background-position: 50% ;
+}
+.title-header{
+    font-weight: 700;
+    font-size: 1.2 em;
+    vertical-align: middle;
+}
+.shopping-container{
+position: relative;
+min-height: 200px;
+padding-bottom: 200px;
+}
+.shopping-container p{
+    text-align: center;
+    color: white;
+}
+.shopping-footer{
+    padding: 5%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    background-color:black;
+}
+.shopping-footer .SUBTOTAL{
+    width: 20%;
+    color:  grey;
+    vertical-align: middle;
+    display: inline-block;
+}
+.shopping-footer .price{
+    width: 75%;
+    text-align: right;
+    color:yellow;
+    font-size: 22px;
+    display: inline-block;
+}
+.footer-buybtn{
+    color: white;
+    text-transform: uppercase;
+    background-color: #0c0b10;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.close-btn{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    cursor: pointer;
+}
